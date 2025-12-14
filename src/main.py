@@ -1,4 +1,3 @@
-"""Главный файл приложения UniMarket"""
 from fastapi import FastAPI
 from src.config import settings
 
@@ -12,12 +11,10 @@ app = FastAPI(
 
 @app.get("/")
 async def root():
-	"""Корневой endpoint - приветствие"""
 	return {"message": "Добро пожаловать в UniMarket!", "version": settings.VERSION}
 
 @app.get("/health")
 async def health_check():
-	"""Health check endpoint - проверка работоспособности"""
 	return {"status": "healthy", "project": settings.PROJECT_NAME}
 
 @app.get("/about")

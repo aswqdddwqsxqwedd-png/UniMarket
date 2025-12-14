@@ -1,53 +1,30 @@
 # UniMarket
 Платформа для покупки и продажи товаров между студентами университета.
 
-Технологии
-- Backend: FastAPI 0.104+
-- Database: PostgreSQL + SQLAlchemy
-- Python: 3.10+
+## Технологии
+- **Backend**: FastAPI 0.104+
+- **Database**: PostgreSQL + SQLAlchemy
+- **Python**: 3.10+
 
-Установка
 
+## Установка
+
+1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/YOUR_USERNAME/UniMarket.git
+git clone https://github.com/aswqdddwqsxqwedd-png/UniMarket.git
 cd UniMarket
+2. Создайте виртуальное окружение:
 python -m venv venv
-venv\Scripts\activate     # Windows
-source venv/bin/activate  # Mac/Linux
+source venv/bin/activate # Mac/Linux
+venv\Scripts\activate # Windows
+3. Установите зависимости:
 pip install -r requirements.txt
-```
-
-Создайте файл `.env` (пример в проекте)
-
-Запуск
-
-```bash
+4. Создайте файл .env:
+PROJECT_NAME=UniMarket
+VERSION=0.1.0
+DEBUG=True
+5. Запустите сервер:
 python src/main.py
-# или
-uvicorn src.main:app --reload
-```
-
-Swagger UI: http://localhost:8000/docs
-ReDoc: http://localhost:8000/redoc
-
-Структура проекта
-```
-UniMarket/
-├── src/              # Исходный код
-│   ├── main.py      # Точка входа
-│   └── config.py    # Конфигурация
-├── tests/           # Тесты
-├── .env             # Переменные окружения
-└── requirements.txt # Зависимости
-```
-
-Разработка
-
-Установите pre-commit hooks:
-
-```bash
-pre-commit install
-```
-
-Автор
-Ваше имя - Студент курса FastAPI
+6. Откройте документацию:
+• Swagger UI: http://localhost:8000/docs
+• ReDoc: http://localhost:8000/redoc

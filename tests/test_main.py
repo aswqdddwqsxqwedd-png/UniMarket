@@ -5,7 +5,6 @@ import requests
 
 
 def _run_server():
-    # Start uvicorn as a subprocess on a different port to avoid conflicts
     proc = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "src.main:app", "--port", "8001"],
         stdout=subprocess.PIPE,
@@ -44,6 +43,6 @@ def test_about():
         assert r.status_code == 200
         data = r.json()
         assert data["project"] == "UniMarket"
-        assert "author" in data
+        assert data["author"] == "Константин"
     finally:
         proc.terminate()
